@@ -1,4 +1,4 @@
-# README
+# Farm2Fork Application
 
 ## Executive Summary
 This project leverages machine learning to estimate the last price valuation in options trading, focusing on SPX options data from 2023. Accurate predictions of the closing price of options enable traders to optimize their exit strategies, potentially compounding gains under favorable conditions.
