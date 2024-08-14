@@ -1,55 +1,40 @@
 # Farm2Fork Application
+Link to Demo: https://video.syr.edu/media/t/1_t1lth0qm
 
 ## Executive Summary
-This project leverages machine learning to estimate the last price valuation in options trading, focusing on SPX options data from 2023. Accurate predictions of the closing price of options enable traders to optimize their exit strategies, potentially compounding gains under favorable conditions.
+Farm2Fork is a comprehensive supply chain application developed using Microsoft PowerApps, SQL database, and PowerBI. This platform seamlessly connects farmers, distributors, and consumers, providing real-time analytics on stock levels, profit and loss, and overall supply chain efficiency. By integrating data analytics through PowerBI, Farm2Fork enhances decision-making, fosters transparency, and supports a more connected agricultural ecosystem.
 
 ## Business Problem
-In the complex world of options trading, accurately predicting the final price of an option at expiration can significantly improve trading outcomes. This project addresses this challenge by developing a machine learning model designed to predict the last price of SPX options, helping traders make informed decisions on when to exit their positions to maximize profitability.
+The agricultural supply chain is often plagued by inefficiencies, lack of transparency, and disconnected stakeholders. Farmers, distributors, and consumers struggle with limited access to real-time data, leading to suboptimal decision-making and potential losses. Farm2Fork aims to address these challenges by providing a unified platform that streamlines the supply chain, offers real-time insights, and fosters better collaboration among all stakeholders.
 
 ## Methodology
 
-### Data Collection and Exploration (EDA)
-1. **Data Sourcing:** The data for this project was sourced from "optionsdx.com", specifically focusing on SPX options chain data for the entire year of 2023. The data was structured into four quarterly folders, each containing files for three months.
-2. **Initial Data Exploration:**
-   - The date range of the data was verified to ensure completeness.
-   - Null values were identified and handled through various methods, including merging with external datasets and forward-filling missing data.
+### Application Development
+1. **Microsoft PowerApps:** The application was built using Microsoft PowerApps, providing an intuitive interface for farmers, distributors, and consumers to interact with the platform. Each stakeholder can access relevant data and perform necessary actions directly from the app.
+2. **SQL Database:** The backend of Farm2Fork is powered by a SQL database, which stores all relevant data related to the supply chain, including inventory levels, transactions, and financial metrics. The database was designed to support efficient data retrieval and ensure data integrity across the platform.
+   - **Data Insertion:** Custom SQL scripts were developed to manage the insertion of farmer inventories and other critical data into the database.
+   - **Stored Procedures:** Several stored procedures were created to handle complex business logic, including inventory updates, profit and loss calculations, and other automated processes.
+   - **Database Maintenance:** SQL scripts were also developed to manage database maintenance tasks, such as backups and updates, ensuring the system remains robust and reliable.
+3. **Python for Data Generation:** Python scripts were employed to generate synthetic data for testing purposes, simulating real-world scenarios and ensuring the platform's functionality before deployment.
 
-### Data Preprocessing
-1. **Data Merging:**
-   - **Risk-Free Rate Data:** The options data was merged with data from the Federal Reserve Economic Data (FRED), which provided the risk-free rate. Missing values in this data were imputed using a feed-forward technique.
-   - **Spot Price Data:** Spot price data was sourced from Yahoo Finance and merged with the options dataset.
-2. **Handling Null Values:**
-   - After merging, null values were checked and rows containing nulls were dropped to ensure data integrity.
-3. **Data Cleaning:**
-   - Column names were cleaned by removing square brackets and unnecessary white spaces to ensure consistency in the dataset.
-
-### Feature Engineering
-1. **Normalization and Scaling:**
-   - The data was normalized and scaled to prepare it for model training. This step ensured that all features contributed equally to the model's learning process.
-2. **Additional Feature Creation:**
-   - Additional columns were created to enhance the dataset, such as calculating implied volatility, moneyness, and other key financial metrics relevant to options trading.
-
-### Model Development
-1. **Model Selection:**
-   - Various machine learning models were considered, with a focus on predicting the last price of the options.
-2. **Training and Evaluation:**
-   - The selected model was trained on the processed dataset, and its performance was evaluated using relevant metrics to ensure accuracy and reliability.
+### Data Analytics
+1. **PowerBI Integration:** PowerBI was integrated into the Farm2Fork application to provide real-time analytics and reporting. This includes dashboards for tracking stock levels, financial performance, and other key metrics.
+2. **Excel for Data Analysis:** Detailed data analysis was conducted using Excel, with various sheets dedicated to different aspects of the supply chain. This analysis informed the development of PowerBI reports and helped identify key trends and insights.
 
 ## Skills
-- Data Collection and Preprocessing
-- Exploratory Data Analysis (EDA)
-- Feature Engineering
-- Machine Learning Model Development
-- Predictive Analytics
-- Python Programming
-- Financial Data Analysis
+- Microsoft PowerApps Development
+- SQL Database Design and Management
+- Stored Procedure Development
+- Python Scripting for Data Generation
+- PowerBI for Data Analytics
+- Excel for Data Analysis
 
 ## Results
-The project successfully developed a machine learning model capable of predicting the last price of SPX options with a focus on short-term expiration dates. The model's predictions provide valuable insights for traders looking to optimize their exit strategies and compound gains in options trading.
+Farm2Fork successfully provides a unified platform that connects all stakeholders in the agricultural supply chain. The real-time analytics and seamless integration between PowerApps, SQL, and PowerBI have significantly improved transparency, decision-making, and overall efficiency within the ecosystem.
 
 ## Next Steps
-- **Model Refinement:** Further optimization of the machine learning model to enhance prediction accuracy.
-- **Expand Data Scope:** Incorporate additional data sources and expand the analysis to include other types of options and expiration dates.
-- **Deployment:** Develop a user-friendly interface or dashboard to allow traders to utilize the model's predictions in real-time.
-- **Backtesting:** Implement a backtesting framework to validate the model's performance in historical trading scenarios.
+- **User Feedback:** Gather feedback from initial users (farmers, distributors, consumers) to identify areas for improvement.
+- **Feature Expansion:** Develop additional features based on user feedback, such as advanced predictive analytics or expanded reporting capabilities.
+- **Scalability:** Explore options to scale the application to support larger datasets and a broader user base.
+- **Continuous Improvement:** Regularly update the platform with new features, security patches, and performance enhancements.
 """
